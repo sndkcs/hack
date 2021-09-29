@@ -192,7 +192,7 @@ async def op(event):
     await event.reply(mm)
 @client.on(events.NewMessage(pattern="/give"))
 async def op(event):
-if not event.sender_id == razan:
+  if not event.sender_id == razan:
     return await event.reply("@JMTHON")
   async for x in client.iter_messages("RR9R7"):
     try:
